@@ -1,29 +1,29 @@
 ```json
 [
   {
-    "title": "Late Blight of Tomatoes | Extension | West Virginia University",
-    "link": "https://extension.wvu.edu/lawn-gardening-pests/plant-disease/fruit-vegetable-diseases/late-blight-tomatoes",
-    "summary": "Continue weekly spray applications to protect plants from further infection. Severely infected plants can be rogued and either buried or burned."
+    "title": "Powdery Mildew / Cherry / Agriculture: Pest Management Guidelines ...",
+    "link": "https://ipm.ucanr.edu/agriculture/cherry/powdery-mildew/",
+    "summary": "Management strategies for powdery mildew on cherry trees, including spraying recommendations to protect fruit after petal fall and treatment for mildew on leaves or shoots."
   },
   {
-    "title": "Tomato Late Blight | NC State Extension Publications",
-    "link": "https://content.ces.ncsu.edu/tomato-late-blight",
-    "summary": "Before disease occurs, apply fungicides at 7-10 day intervals. After disease is detected in your area, apply fungicides at 5-7 day intervals. Alternate products"
+    "title": "Cherry (Prunus spp.)-Powdery Mildew",
+    "link": "https://pnwhandbooks.org/plantdisease/host-disease/cherry-prunus-spp-powdery-mildew",
+    "summary": "Information on chemical control options for powdery mildew on cherry trees, including specific fungicides and their application details."
   },
   {
-    "title": "[PDF] Tomato Late Blight - Identification and Management",
-    "link": "https://barron.extension.wisc.edu/files/2023/02/Tomato-Late-Blight.pdf",
-    "summary": "Strategies for managing late blight in tomato include planting resistant cultivars, eliminating volunteers (tomato plants that have re-seeded from the previous seasons), and applying appropriate fungicides."
+    "title": "Powdery Mildew of Cherry: Fungicide Resistance Management ...",
+    "link": "https://decisionaid.systems/articles/Powdery_Mildew_of_Cherry_New_Fungicide_Tools_and_Resistance_Management_Guidelines",
+    "summary": "Guidelines for managing fungicide resistance in powdery mildew of cherry, including information on fungicide site of action and mode of action."
   },
   {
-    "title": "Late Blight of Tomato and Potato | VCE Publications | Virginia Tech",
-    "link": "https://www.pubs.ext.vt.edu/ANR/ANR-6/ANR-6.html",
-    "summary": "Both cultural controls and preventative fungicide sprays are necessary to manage late blight. Preventative tactics include: Purchase disease-free transplants, provide good air circulation, and avoid overhead irrigation."
+    "title": "Controlling powdery mildew in tart cherry orchards - MSU Extension",
+    "link": "https://www.canr.msu.edu/news/controlling_powdery_mildew_in_tart_cherry_orchards",
+    "summary": "Discussion of effective fungicides for powdery mildew control in tart cherry orchards, highlighting SDHI premixes and strobilurin fungicides."
   },
-    {
-    "title": "Late Blight of Tomato - Missouri Botanical Garden",
-    "link": "https://www.missouribotanicalgarden.org/gardens-gardening/your-garden/help-for-the-home-gardener/advice-tips-resources/insects-pests-and-problems/diseases/fungal-spots/late-blight-of-tomato",
-    "summary": "Use a copper-based fungicide. Apply when symptoms are first identified. Reapply at 7–10 day intervals. Organic Strategies. Strategies 1, 2, 3, and 4 are"
+  {
+    "title": "Powdery Mildew (Sweet Cherries) - BC Tree Fruit Production Guide",
+    "link": "https://www.bctfpg.ca/pest_guide/info/101/Powdery_Mildew_Sweet_Cherries",
+    "summary": "Recommendations for early control programs for powdery mildew on sweet cherries, starting no later than bloom to petal fall to protect emerging green tissue."
   }
 ]
 ```
