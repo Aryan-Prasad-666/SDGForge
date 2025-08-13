@@ -1,32 +1,32 @@
 [
   {
-    "crop_name": "Paddy (Rice)",
-    "sowing_time": "June-July",
-    "cultivation_tips": "Ensure proper water management and nutrient supply. Use high-yielding varieties suitable for Karnataka.",
-    "expected_yield": "2.5-3 tons/acre"
-  },
-  {
     "crop_name": "Maize",
     "sowing_time": "June-July",
-    "cultivation_tips": "Select hybrid seeds, apply recommended doses of fertilizers, and manage pests and diseases effectively.",
-    "expected_yield": "3-4 tons/acre"
-  },
-  {
-    "crop_name": "Red Gram (Tur)",
-    "sowing_time": "June-July",
-    "cultivation_tips": "Use improved varieties, provide proper drainage, and control pod borers.",
-    "expected_yield": "0.8-1.2 tons/acre"
+    "cultivation_tips": "Ensure well-drained soil with good organic matter. Maintain a pH between 5.5-7.5. Apply appropriate fertilizers based on soil testing.",
+    "expected_yield": "20-25 quintals/acre"
   },
   {
     "crop_name": "Groundnut",
     "sowing_time": "June-July",
-    "cultivation_tips": "Select disease-resistant varieties, ensure proper gypsum application, and manage leaf miners and pod borers.",
-    "expected_yield": "1-1.5 tons/acre"
+    "cultivation_tips": "Requires well-drained sandy loam soil. Provide adequate irrigation during pod development. Control pests and diseases effectively.",
+    "expected_yield": "10-12 quintals/acre"
+  },
+  {
+    "crop_name": "Red Gram (Pigeon Pea)",
+    "sowing_time": "June-July",
+    "cultivation_tips": "Suitable for rainfed conditions. Use Rhizobium culture for better nitrogen fixation. Intercropping can improve yield and soil fertility.",
+    "expected_yield": "8-10 quintals/acre"
   },
   {
     "crop_name": "Finger Millet (Ragi)",
     "sowing_time": "June-July",
-    "cultivation_tips": "Use improved varieties, apply recommended doses of fertilizers, and manage blast disease.",
-    "expected_yield": "1.5-2 tons/acre"
+    "cultivation_tips": "Requires well-drained red sandy loamy soil. Apply farmyard manure for better yield. Implement timely weed control measures.",
+    "expected_yield": "15-20 quintals/acre"
+  },
+  {
+    "crop_name": "Sunflower",
+    "sowing_time": "June-July",
+    "cultivation_tips": "Well-drained red soils are suitable. Ensure proper spacing between plants. Protect the crop from bird damage during seed filling.",
+    "expected_yield": "8-10 quintals/acre"
   }
 ]
