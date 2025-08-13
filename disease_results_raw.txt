@@ -13,17 +13,17 @@
   {
     "title": "[PDF] Tomato Late Blight - Identification and Management",
     "link": "https://barron.extension.wisc.edu/files/2023/02/Tomato-Late-Blight.pdf",
-    "summary": "Strategies for managing late blight in tomato include planting resistant cultivars, eliminating volunteers (tomato plants that have re-seeded from the previous year), and applying appropriate fungicides."
+    "summary": "Strategies for managing late blight in tomato include planting resistant cultivars, eliminating volunteers (tomato plants that have re-seeded from the previous seasons), and applying appropriate fungicides."
   },
   {
-    "title": "How to Prevent Late Blight on Tomatoes - Gardener's Supply",
-    "link": "https://www.gardeners.com/how-to/prevent-late-blight/7262.html?srsltid=AfmBOordxTLQkVSyXPXwm4gjTSWLvLfAdKBumgi-RrgRKuApubu15KyY",
-    "summary": "Pull up the plants and either seal them tightly in a trash bag, or secure them under black plastic, where the sun's heat can kill the spores."
+    "title": "Late Blight of Tomato and Potato | VCE Publications | Virginia Tech",
+    "link": "https://www.pubs.ext.vt.edu/ANR/ANR-6/ANR-6.html",
+    "summary": "Both cultural controls and preventative fungicide sprays are necessary to manage late blight. Preventative tactics include: Purchase disease-free transplants, provide good air circulation, and avoid overhead irrigation."
   },
-  {
+    {
     "title": "Late Blight of Tomato - Missouri Botanical Garden",
     "link": "https://www.missouribotanicalgarden.org/gardens-gardening/your-garden/help-for-the-home-gardener/advice-tips-resources/insects-pests-and-problems/diseases/fungal-spots/late-blight-of-tomato",
-    "summary": "Use a copper-based fungicide. Apply when symptoms are first identified. Reapply at 7–10 day intervals. Organic Strategies."
+    "summary": "Use a copper-based fungicide. Apply when symptoms are first identified. Reapply at 7–10 day intervals. Organic Strategies. Strategies 1, 2, 3, and 4 are"
   }
 ]
 ```

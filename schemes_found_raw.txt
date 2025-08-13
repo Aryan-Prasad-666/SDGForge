@@ -1,0 +1,34 @@
+```json
+[
+  {
+    "name": "Assam Mukhyamantri Krishi Sa Sajuli Yozana",
+    "category": "Agriculture",
+    "description": "The scheme is a State Owned Priority Development (SOPD) scheme for farmers launched by the Assam government. It provides financial assistance to eligible farmers in Assam.",
+    "link": "https://www.myscheme.gov.in/schemes/mmkssy-assam"
+  },
+  {
+    "name": "Assam Farmer's Credit Subsidy Scheme (AFCSS)",
+    "category": "Credit Subsidy",
+    "description": "The scheme provides 25% reimbursement (subsidy) on short term crop loans up to a maximum cap. It aims to benefit farmers in Assam by reducing their loan burden.",
+    "link": "https://www.indiafilings.com/learn/assam-farmers-credit-subsidy-scheme/"
+  },
+  {
+    "name": "National Mission for Sustainable Agriculture (NMSA)",
+    "category": "Agriculture",
+    "description": "This scheme promotes sustainable agricultural practices to enhance productivity and income. While not Assam-specific, the Assam government implements it.",
+    "link": "https://nmsa.dac.gov.in/"
+  },
+  {
+    "name": "Schemes | Department of Agriculture & Horticulture, Assam",
+    "category": "Agriculture",
+    "description": "This is a general link to the department's schemes, including Agri Vision 2025, Horti Vision 2020, National Food Security Mission, National Mission on Oil Seeds & Oil Palm, and Credit Guarantee Fund Scheme. Needs further exploration on the website.",
+    "link": "https://agri-horti.assam.gov.in/schemes"
+  },
+  {
+    "name": "Agriculture Loan - AGVB",
+    "category": "Loan",
+    "description": "This scheme provides agriculture loans to farmers owning a maximum of 5 acres of non-irrigated land (or 2.5 acres of irrigated land).",
+    "link": "https://www.agvbank.co.in/agvb_loan_n_advances/ac_agriculture_loan.html"
+  }
+]
+```
