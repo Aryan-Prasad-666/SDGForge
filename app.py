@@ -830,7 +830,6 @@ def veterinary_assistant_post():
                 logger.warning("Empty response from Gemini")
                 answer = "No answer found. Please ask a more specific veterinary question."
 
-            # Store the conversation in Mem0
             mem0_client.add(
                 messages=[
                     {"role": "user", "content": query},
@@ -840,7 +839,6 @@ def veterinary_assistant_post():
                 output_format="v1.1"
             )
 
-            # Add to session history
             session_history = get_session_history('veterinary')
             session_history.add_user_message(query)
             session_history.add_ai_message(answer)
@@ -932,7 +930,6 @@ def financial_assistant_post():
                 output_format="v1.1"
             )
 
-            # Add to session history
             session_history = get_session_history('financial')
             session_history.add_user_message(query)
             session_history.add_ai_message(answer)
@@ -965,12 +962,10 @@ def analyze_document():
         if not file.filename:
             return jsonify({"error": "No file selected"}), 400
 
-        # Validate file type
         allowed_extensions = {'pdf', 'jpg', 'jpeg', 'png', 'doc', 'docx'}
         if file.filename.rsplit('.', 1)[-1].lower() not in allowed_extensions:
             return jsonify({"error": "Unsupported file type. Use PDF, JPG, PNG, DOC, or DOCX."}), 400
 
-        # Basic content extraction (simulated OCR for images/PDFs, direct for DOCX)
         content = ""
         if file.filename.endswith('.pdf'):
             pdf_reader = pypdf.PdfReader(file)
@@ -986,7 +981,6 @@ def analyze_document():
         if not content.strip():
             content = f"Placeholder content for {document_type} document."
 
-        # Define prompt template
         prompt_template = PromptTemplate(
             input_variables=["content", "document_type", "language"],
             template=""" 
@@ -1084,10 +1078,9 @@ def weather_advisory_data():
         district = data['district'].strip().title()
         state = data['state'].strip().title()
 
-        # Generate dates for the forecast
         today = datetime.now()
-        daily_dates = [(today + timedelta(days=i)).strftime('%Y-%m-%d') for i in range(1, 3)]  # Next 2 days
-        weekly_dates = [(today + timedelta(days=i)).strftime('%Y-%m-%d') for i in range(1, 8)]  # Next 7 days
+        daily_dates = [(today + timedelta(days=i)).strftime('%Y-%m-%d') for i in range(1, 3)] 
+        weekly_dates = [(today + timedelta(days=i)).strftime('%Y-%m-%d') for i in range(1, 8)] 
 
         prompt_template = PromptTemplate(
             input_variables=["location", "district", "state", "daily_dates", "weekly_dates"],
@@ -1197,7 +1190,6 @@ def weather_advisory_data():
                 logger.error("Invalid response format from Gemini")
                 return jsonify({"error": "Invalid weather data format"}), 500
 
-            # Validate daily forecast
             required_daily_fields = ['date', 'condition', 'temperature', 'humidity', 'icon']
             valid_daily = []
             for day in weather_data['daily_forecast']:
@@ -1207,7 +1199,6 @@ def weather_advisory_data():
                     logger.warning(f"Invalid daily forecast object: {day}")
             weather_data['daily_forecast'] = valid_daily
 
-            # Validate weekly forecast
             required_weekly_fields = ['date', 'condition', 'min_temp', 'max_temp', 'icon']
             valid_weekly = []
             for day in weather_data['weekly_forecast']:
@@ -1217,7 +1208,6 @@ def weather_advisory_data():
                     logger.warning(f"Invalid weekly forecast object: {day}")
             weather_data['weekly_forecast'] = valid_weekly
 
-            # Ensure agricultural tips and alerts are present
             if 'agricultural_tips' not in weather_data or not isinstance(weather_data['agricultural_tips'], list):
                 weather_data['agricultural_tips'] = ["No agricultural tips available."]
             if 'weather_alerts' not in weather_data or not isinstance(weather_data['weather_alerts'], str):
