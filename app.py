@@ -173,12 +173,16 @@ scheme_researcher = Agent(
     llm=llm
 )
 
-load_dotenv()
-app = Flask(__name__)
+crop_planner = Agent(
+    role="Crop Planning Expert",
+    goal="Generate personalized crop recommendations based on location, season, soil type, and land size.",
+    backstory="An AI agronomist specializing in crop selection and cultivation advice for Indian farmers.",
+    tools=[serper_tool, soil_type_tool],
+    verbose=True,
+    llm=llm
+)
 
-gemini_api_key = os.getenv('GEMINI_API_KEY')
-serper_api_key = os.getenv('SERPER_API_KEY')
-mem0_api_key = os.getenv('MEM0_API_KEY')
+
 
 @app.route('/')
 def index():

@@ -1,34 +1,124 @@
 ```json
 [
   {
-    "name": "Assam Mukhyamantri Krishi Sa Sajuli Yozana",
-    "category": "Agriculture",
-    "description": "The scheme is a State Owned Priority Development (SOPD) scheme for farmers launched by the Assam government. It provides financial assistance to eligible farmers in Assam.",
-    "link": "https://www.myscheme.gov.in/schemes/mmkssy-assam"
+    "name": "Mukhya Mantri Krishi Sa Sajuli Yozana - Assam - myScheme",
+    "link": "https://www.myscheme.gov.in/schemes/mmkssy-assam",
+    "description": "The scheme \u201cMukhya Mantri Krishi Sa Sajuli Yojana\u201d is a State Owned Priority Development (SOPD) scheme for farmers launched by the Assam government in FY 2018-",
+    "category": "Agriculture"
   },
   {
     "name": "Assam Farmer's Credit Subsidy Scheme (AFCSS)",
-    "category": "Credit Subsidy",
-    "description": "The scheme provides 25% reimbursement (subsidy) on short term crop loans up to a maximum cap. It aims to benefit farmers in Assam by reducing their loan burden.",
-    "link": "https://www.indiafilings.com/learn/assam-farmers-credit-subsidy-scheme/"
+    "link": "https://schemes.vikaspedia.in/viewcontent/schemesall/state-specific-schemes/welfare-schemes-of-assam/assam-farmer-s-credit-subsidy-scheme--afcss-?lgn=en",
+    "description": "Assam Farmer's Credit Subsidy Scheme (AFCSS) will provide 25% reimbursement (subsidy) on short term crop loans upto maximum cap of Rs. 25000, 4 lakh farmers to ...",
+    "category": "Agriculture"
   },
   {
-    "name": "National Mission for Sustainable Agriculture (NMSA)",
-    "category": "Agriculture",
-    "description": "This scheme promotes sustainable agricultural practices to enhance productivity and income. While not Assam-specific, the Assam government implements it.",
-    "link": "https://nmsa.dac.gov.in/"
+    "name": "Assam Mukhyamantri Krishi Sa Sajuli Yojna | Govt Schemes India",
+    "link": "https://www.govtschemes.in/assam-mukhyamantri-krishi-sa-sajuli-yojna",
+    "description": "Under this scheme, financial assistance of Rs.5000 will be provided to the eligible farmers of the state; Only small and marginal farmers of ...",
+    "category": "Agriculture"
   },
   {
-    "name": "Schemes | Department of Agriculture & Horticulture, Assam",
-    "category": "Agriculture",
-    "description": "This is a general link to the department's schemes, including Agri Vision 2025, Horti Vision 2020, National Food Security Mission, National Mission on Oil Seeds & Oil Palm, and Credit Guarantee Fund Scheme. Needs further exploration on the website.",
-    "link": "https://agri-horti.assam.gov.in/schemes"
+    "name": "Agriculture Department, Assam | Assam.MyGov.in",
+    "link": "https://assam.mygov.in/en/group/agriculture-department-assam/",
+    "description": "It aims to educate the farmers in practising sustainable and commercial modes of agriculture, with the use of scientific methods. Besides popularizing the use ...",
+    "category": "Agriculture"
   },
   {
-    "name": "Agriculture Loan - AGVB",
-    "category": "Loan",
-    "description": "This scheme provides agriculture loans to farmers owning a maximum of 5 acres of non-irrigated land (or 2.5 acres of irrigated land).",
-    "link": "https://www.agvbank.co.in/agvb_loan_n_advances/ac_agriculture_loan.html"
+    "name": "ASSAM - Facebook",
+    "link": "https://www.facebook.com/tezpurbuzz/posts/assam-in-a-major-push-towards-rural-empowerment-and-agricultural-support-over-20/781306357758681/",
+    "description": "ASSAM| In a major push towards rural empowerment and agricultural support, over 20.31 lakh farmers in Assam have received \u20b9422.05 crore ...",
+    "category": "Agriculture"
+  },
+  {
+    "name": "Enough opportunity to promote Natural farming in Assam, the ... - PIB",
+    "link": "https://www.pib.gov.in/PressReleaseIframePage.aspx?PRID=2030094",
+    "description": "The Central Government will continue to provide all possible assistance to Assam in the interest of farmers and agriculture sector- Union Agriculture & Farmers ...",
+    "category": "Agriculture"
+  },
+  {
+    "name": "Assam Farmer's Credit Subsidy Scheme - IndiaFilings",
+    "link": "https://www.indiafilings.com/learn/assam-farmers-credit-subsidy-scheme/",
+    "description": "The primary purpose of the scheme is to provide financial assistance to the farmers, where 25% of the crop loans will be waived off by the government.",
+    "category": "Agriculture"
+  },
+  {
+    "name": "Credit Guarantee Scheme for Subordinate Debt - Vikaspedia",
+    "link": "https://en.vikaspedia.in/viewcontent/schemesall/aatma-nirbhar-bharat-abhiyaan/credit-guarantee-scheme-for-subordinate-debt",
+    "description": "Scheme. Assam Farmer's Credit Subsidy Scheme (AFCSS). This topic provides information about Assam Farmer's Credit Subsidy Scheme (AFCSS). Scheme ...",
+    "category": "Agriculture"
+  },
+  {
+    "name": "Integrated Horticulture Development - Assam - myScheme",
+    "link": "https://www.myscheme.gov.in/schemes/ihd",
+    "description": "What is the agriculture scheme for Assam in 2023? The state government of Assam has launched a new Zero Interest Crop Loan Scheme 2023 for the farmers in budget ...",
+    "category": "Agriculture"
+  },
+  {
+    "name": "[DOC] 17022053172_Govt_of_Assam_...",
+    "link": "https://www.nabard.org/auth/writereaddata/careernotices/17022053172_Govt_of_Assam_Prog_with_Bank_Credit.docx",
+    "description": "The Scheme will cover short term loans under the Kisan Credit Card (KCC) and Agricultural Term Loan to farmers up to Rs.2.00 lakh sanctioned by Scheduled ...",
+    "category": "Agriculture"
+  },
+  {
+    "name": "Assam Government Announces Rs 1000- Crore Schemes for Farmers",
+    "link": "https://krishijagran.com/news/assam-government-announces-rs-1000-crore-schemes-for-farmers/",
+    "description": "Assam government will be launching three schemes for the farmers, including a partial loan reimbursement programme and the other that will make crop loans ...",
+    "category": "Agriculture"
+  },
+  {
+    "name": "Home - BTR Farmers' Database | Agriculture Department",
+    "link": "https://www.btragri.co.in/",
+    "description": "Assam Agriculture Dept. Agriculture & Farmer Welfare India \u00b7 Farmer Portal \u00b7 Agriculture Scheme. SCHEMES. NABARD \u00b7 PMFBY \u00b7 Major Schemes \u00b7 RKVY \u00b7 RIDF STW.",
+    "category": "Agriculture"
+  },
+  {
+    "name": "Assam govt announces 3 schemes for farmer's welfare",
+    "link": "https://theindianawaaz.com/assam-govt-announces-3-schemes-for-farmers-welfare/",
+    "description": "AMN / GUWAHATI Assam government has announced three schemes for the welfare of farmers. The schemes are the Assam Farmers' Credit Subsidy Scheme (AFCSS), ...",
+    "category": "Agriculture"
+  },
+  {
+    "name": "[PDF] government of india - Digital Sansad",
+    "link": "https://sansad.in/getFile/loksabhaquestions/annex/184/AU1967_A9qL9t.pdf?source=pqals",
+    "description": "In Assam more than 20.87 lakh farmers received the benefits of 19th installment of PM-Kisan Scheme amounting to Rs. 475.09 Cr. Further, States/UTs are mandated ...",
+    "category": "Agriculture"
+  },
+  {
+    "name": "Agriculture | Karbi Anglong District | Government Of Assam, India",
+    "link": "https://karbianglong.gov.in/departments/agriculture",
+    "description": "Enhancement of economic up liftment with special thrust to landless, marginal and small farmers. Employment generation for rural people in the agricultural ...",
+    "category": "Agriculture"
+  },
+  {
+    "name": "Assam Farmers Credit Subsidy Scheme Articles - IndiaFilings",
+    "link": "https://www.indiafilings.com/learn/tag/assam-farmers-credit-subsidy-scheme/",
+    "description": "Samagra Gramya Unnayan Yojana (CMSGUY) The Government of Assam has launched Samagra Gramya Unnayan Yojana for farmers with the aim of doubling the income of the ...",
+    "category": "Agriculture"
+  },
+  {
+    "name": "Assam Budget 2025: Strengthening 500 Farmer Producer ...",
+    "link": "https://www.facebook.com/100078191321905/posts/assam-budget-2025-strengthening-500-farmer-producer-organisations-under-cms-exce/657097310239974/",
+    "description": "The government believes that this scheme will create new opportunities for farmers, strengthen self-reliance in agriculture, and boost the ...",
+    "category": "Agriculture"
+  },
+  {
+    "name": "ASSAM - Instagram",
+    "link": "https://www.instagram.com/p/DM5h9fpJUdV/",
+    "description": "#ASSAM| In a major push towards rural empowerment and agricultural support, over 20.31 lakh farmers in Assam have received \u20b9422.05 crore ...",
+    "category": "Agriculture"
+  },
+  {
+    "name": "Schemes | Department of Agriculture & Horticulture",
+    "link": "https://agri-horti.assam.gov.in/schemes",
+    "description": "Government Of Assam Department of Agriculture & Horticulture \u00b7 National Food Security Mission (NFSM) \u00b7 National Mission for Sustainable Agriculture (NMSA) ...",
+    "category": "Agriculture"
+  },
+  {
+    "name": "Schemes and Program | Directorate of Agriculture",
+    "link": "https://diragri.assam.gov.in/portlet-innerpage/schemes-and-program-0",
+    "description": "Schemes and Program \u00b7 NMAET: Sub-Mission on Agricultural Mechanization (SMAM) \u00b7 Rastriya Krishi Vikash Yojana (RKVY) \u00b7 Bringing Green Revolution to Eastern India ( ...",
+    "category": "Agriculture"
   }
 ]
 ```
