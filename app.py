@@ -14,6 +14,9 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from typing import List, Dict, Any
 from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type
 import logging
+from PIL import Image
+import pypdf
+import docx
 from datetime import datetime
 from datetime import timedelta 
 
@@ -650,7 +653,121 @@ def disease():
 
     return render_template('disease.html', error_message=error_message, result=result, form_submitted=form_submitted)
 
+@app.route('/document_analyzer')
+def document_analyzer():
+    lang = request.args.get('lang', 'en')
+    return render_template('document_analyzer.html', lang=lang)
 
+@app.route('/analyze_document', methods=['POST'])
+def analyze_document():
+    try:
+        if 'file' not in request.files:
+            return jsonify({"error": "No file provided"}), 400
+
+        file = request.files['file']
+        document_type = request.form.get('document_type', 'other')
+        language = request.form.get('language', 'en')
+
+        if not file.filename:
+            return jsonify({"error": "No file selected"}), 400
+
+        # Validate file type
+        allowed_extensions = {'pdf', 'jpg', 'jpeg', 'png', 'doc', 'docx'}
+        if file.filename.rsplit('.', 1)[-1].lower() not in allowed_extensions:
+            return jsonify({"error": "Unsupported file type. Use PDF, JPG, PNG, DOC, or DOCX."}), 400
+
+        # Basic content extraction (simulated OCR for images/PDFs, direct for DOCX)
+        content = ""
+        if file.filename.endswith('.pdf'):
+            pdf_reader = pypdf.PdfReader(file)
+            for page in pdf_reader.pages:
+                content += page.extract_text() or ""
+        elif file.filename.endswith(('.jpg', '.jpeg', '.png')):
+            image = Image.open(file)
+            content = f"Sample {document_type} document content extracted from image."
+        elif file.filename.endswith(('.doc', '.docx')):
+            doc = docx.Document(file)
+            content = "\n".join([para.text for para in doc.paragraphs])
+
+        if not content.strip():
+            content = f"Placeholder content for {document_type} document."
+
+        # Define prompt template
+        prompt_template = PromptTemplate(
+            input_variables=["content", "document_type", "language"],
+            template=""" 
+            You are a financial document analysis assistant for India. Analyze the provided document content and provide guidance for filling it out correctly. The document type is '{document_type}' and the output must be in '{language}'.
+
+            Document Content:
+            {content}
+
+            Instructions:
+            - Analyze the document content and identify its purpose and requirements.
+            - Provide the following in '{language}':
+              - Summary: A brief description of the document's purpose (1-2 sentences).
+              - Required Information: A list of 3-5 key fields or details needed to complete the document.
+              - Filing Instructions: A list of 3-5 steps to correctly fill out or submit the document.
+              - Important Notes: Any additional guidance or requirements (e.g., supporting documents, mandatory fields).
+            - Return a JSON object with translations for English, Hindi, and Kannada, even if the requested language is only one of them.
+            - Ensure the JSON is valid and properly formatted.
+            - Do not include markdown or extra text, only the JSON object.
+
+            Example Output:
+            {{
+                "en": {{
+                    "summary": "This is a loan application form requiring personal and financial details.",
+                    "required_info": ["Name and address", "Monthly income", "Loan amount", "Purpose of loan", "Repayment period"],
+                    "instructions": ["Fill in personal details in BLOCK LETTERS", "Provide accurate income", "State loan purpose clearly", "Include bank details", "Sign the form"],
+                    "notes": "Attach Aadhaar/PAN, address proof, and income proof. All fields marked with * are mandatory."
+                }},
+                "hi": {{
+                    "summary": "यह एक ऋण आवेदन पत्र है जिसमें व्यक्तिगत और वित्तीय विवरण की आवश्यकता है।",
+                    "required_info": ["नाम और पता", "मासिक आय", "ऋण राशि", "ऋण का उद्देश्य", "पुनर्भुगतान अवधि"],
+                    "instructions": ["व्यक्तिगत विवरण बड़े अक्षरों में भरें", "सटीक आय प्रदान करें", "ऋण का उद्देश्य स्पष्ट करें", "बैंक विवरण शामिल करें", "फॉर्म पर हस्ताक्षर करें"],
+                    "notes": "आधार/पैन, पते का प्रमाण और आय प्रमाण संलग्न करें। * के साथ चिह्नित सभी फ़ील्ड अनिवार्य हैं।"
+                }},
+                "kn": {{
+                    "summary": "ಇದು ವೈಯಕ್ತಿಕ ಮತ್ತು ಆರ್ಥಿಕ ವಿವರಗಳನ್ನು ಕೋರುವ ಸಾಲದ ಅರ್ಜಿ ನಮೂನೆಯಾಗಿದೆ.",
+                    "required_info": ["ಹೆಸರು ಮತ್ತು ವಿಳಾಸ", "ಮಾಸಿಕ ಆದಾಯ", "ಸಾಲದ ಮೊತ್ತ", "ಸಾಲದ ಉದ್ದೇಶ", "ಮರುಪಾವತಿ ಅವಧಿ"],
+                    "instructions": ["ವೈಯಕ್ತಿಕ ವಿವರಗಳನ್ನು ದೊಡ್ಡ ಅಕ್ಷರಗಳಲ್ಲಿ ಭರ್ತಿ ಮಾಡಿ", "ನಿಖರವಾದ ಆದಾಯವನ್ನು ಒದಗಿಸಿ", "ಸಾಲದ ಉದ್ದೇಶವನ್ನು ಸ್ಪಷ್ಟವಾಗಿ ತಿಳಿಸಿ", "ಬ್ಯಾಂಕ್ ವಿವರಗಳನ್ನು ಸೇರಿಸಿ", "ಫಾರ್ಮ್‌ಗೆ ಸಹಿ ಮಾಡಿ"],
+                    "notes": "ಆಧಾರ್/ಪ್ಯಾನ್, ವಿಳಾಸದ ಪುರಾವೆ ಮತ್ತು ಆದಾಯದ ಪುರಾವೆಯನ್ನು ಲಗತ್ತಿಸಿ. * ಗುರುತಿನ ಎಲ್ಲಾ ಕ್ಷೇತ್ರಗಳು ಕಡ್ಡಾಯವಾಗಿವೆ."
+                }}
+            }}
+            """
+        )
+
+        prompt = prompt_template.format(
+            content=content[:1000],
+            document_type=document_type,
+            language={'en': 'English', 'hi': 'Hindi', 'kn': 'Kannada'}[language]
+        )
+
+        try:
+            logger.debug(f"Sending prompt to Gemini: {prompt[:200]}...")
+            response = langchain_llm.invoke(prompt)
+            logger.debug(f"Raw Gemini response: {response.content}")
+
+            response_content = response.content.strip()
+            response_content = re.sub(r'^```json\s*|\s*```$', '', response_content).strip()
+            logger.debug(f"Cleaned Gemini response: {response_content}")
+
+            analysis = json.loads(response_content)
+            if not isinstance(analysis, dict) or not all(lang in analysis for lang in ['en', 'hi', 'kn']):
+                logger.error("Invalid analysis response format")
+                return jsonify({"error": "Invalid analysis response"}), 500
+
+        except (json.JSONDecodeError, ValueError) as e:
+            logger.error(f"Error parsing Gemini response: {str(e)}")
+            return jsonify({"error": "Failed to parse analysis response"}), 500
+        except Exception as e:
+            logger.error(f"Gemini query error: {str(e)}")
+            return jsonify({"error": f"Analysis error: {str(e)}"}), 500
+
+        return jsonify({"analysis": analysis}), 200
+
+    except Exception as e:
+        logger.error(f"Server error: {str(e)}")
+        return jsonify({"error": f"Server error: {str(e)}"}), 500
 
 
 @app.route('/telegram')
